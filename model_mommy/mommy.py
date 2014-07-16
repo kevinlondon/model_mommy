@@ -76,7 +76,7 @@ def make(model, _quantity=None, make_m2m=False, **attrs):
 
 def prepare(model, _quantity=None, **attrs):
     """
-    Creates a BUT DOESN'T persist an instance from a given model its
+    Creates BUT DOESN'T persist an instance from a given model its
     associated models.
     It fill the fields with random values or you can specify
     which fields you want to define its values by yourself.
@@ -257,7 +257,7 @@ class Mommy(object):
         return self._make(commit=True, **attrs)
 
     def prepare(self, **attrs):
-        '''Creates, but do not persists, an instance of the model
+        '''Create, but do not persist, an instance of the model
         associated with Mommy instance.'''
         self.type_mapping[ForeignKey] = prepare
         self.type_mapping[OneToOneField] = prepare
